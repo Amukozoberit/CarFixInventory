@@ -19,6 +19,9 @@ class ShopInventorySerializer(serializers.ModelSerializer):
 class ServiceSerializer(serializers.ModelSerializer):
     '''
     services serializers
+    complexity:how difficult is the task
+    title:name of the service has to be unique for each service
+    duration:time it takes to do the task
        
     For get:click try it out:Then click execute 
     For post click try out then add the fields then click execute
