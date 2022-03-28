@@ -1,8 +1,8 @@
 from django.shortcuts import render
 
-from carFixInventoryApp.models import Mechanic,  ShopInventory
+from carFixInventoryApp.models import Mechanic, Service,  ShopInventory
 
-from .serializers import MechanicSerializer,ShopInventorySerializer
+from .serializers import MechanicSerializer, ServiceSerializer,ShopInventorySerializer
 from rest_framework import generics
 from rest_framework.response import Response
 from rest_framework import viewsets
@@ -37,3 +37,13 @@ class MechanicViewSet(viewsets.ModelViewSet):
         mechanic=Mechanic.objects.all()
         return mechanic
 
+
+class ServiceViewSet(viewsets.ModelViewSet):
+    # '''view for mechanics used viewset to separate post and get
+    # viewset offers shorter code compared to function methods
+    # '''
+    serializer_class=ServiceSerializer
+
+    def get_queryset(self):
+        service=Service.objects.all()
+        return service

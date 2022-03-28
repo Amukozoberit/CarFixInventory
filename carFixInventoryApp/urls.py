@@ -7,6 +7,8 @@ urlpatterns = [
     path('inventoryView/<int:pk>', views.InventorySnippetDetail.as_view()),
     path('mechanicsview/', views.MechanicViewSet.as_view({'get': 'list'})),
     path('mechanicpost/', views.MechanicViewSet.as_view({'post': 'create'})),
+    path('serviceview/', views.ServiceViewSet.as_view({'get': 'list'})),
+    path('servicepost/', views.ServiceViewSet.as_view({'post': 'create'})),
 
 ]
 

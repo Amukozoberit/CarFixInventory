@@ -7,6 +7,10 @@ from .models import Mechanic, Service, ShopInventory
 class ShopInventorySerializer(serializers.ModelSerializer):
     '''
     shop inventory serializer
+    
+    For get:click try it out:Then click execute 
+    For post click try out then add the fields then click execute
+    For put:click try out fill the fields and input the id in the id field
     '''
     class Meta:
         model=ShopInventory
@@ -15,6 +19,9 @@ class ShopInventorySerializer(serializers.ModelSerializer):
 class ServiceSerializer(serializers.ModelSerializer):
     '''
     services serializers
+       
+    For get:click try it out:Then click execute 
+    For post click try out then add the fields then click execute
     '''
     class Meta:
         model = Service
@@ -24,6 +31,9 @@ class MechanicSerializer(serializers.ModelSerializer):
     '''
 
     mechanic serializer
+       shop inventory model
+    For get:click try it out:Then click execute 
+    For post click try out then add the fields then click execute
     '''
     services = ServiceSerializer(many=True)
 
